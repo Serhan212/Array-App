@@ -118,4 +118,26 @@ public class MainApp {
         }
         return differenceArr;
     }
+
+    // Tek indisli elemanların toplamı (Örn: index 1, 3, 5...)
+    public static int findOddSum(int[] arr) {
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (i % 2 != 0) {
+                sum += arr[i];
+            }
+        }
+        return sum;
+    }
+
+    // Çift indisli elemanların toplamı (Örn: index 0, 2, 4...)
+    public static int findEvenSum(int[] arr) {
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (i % 2 == 0) {
+                sum += arr[i];
+            }
+        }
+        return sum;
+    }
 }
