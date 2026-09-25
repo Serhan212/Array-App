@@ -19,8 +19,8 @@ public class MainApp {
             int choice = scanner.nextInt();
             if (choice == 1) {
                 // Create a random array
-                int size = scanner.nextInt();
                 System.out.print("Enter the size of the array: ");
+                int size = scanner.nextInt();
                 array = createRandomArray(size);
             } else if (choice == 2) {
                 // Find array's maximum and minimum
@@ -77,5 +77,24 @@ public class MainApp {
             arr[i] = random.nextInt(101);
         }
         return arr;
+    }
+    
+    //Average of array
+    public static double findAverage(int[] arr) {
+        double sum = 0;
+        for(int num: arr) {
+            sum += num;
+        }
+        //Average
+        return sum / arr.length;
+    }
+    
+    // Difference between number in array and average
+    public static double[] findDifferences(int[] arr, double avg) {
+        double[] differenceArr =  new double[arr.length];
+        for(int i = 0; i < arr.length; i++) {
+            differenceArr[i] = Math.round((arr[i] - avg) * 10) /10 ;
+        }
+        return differenceArr;
     }
 }
